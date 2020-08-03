@@ -40,7 +40,7 @@ public class CollegeController {
     @GetMapping("/college/pegination")
     public ResponseEntity<List<College>> getAllCollegeName(@RequestParam(defaultValue = "0") Integer pageNo,
             @RequestParam(defaultValue = "2") Integer pageSize,
-            @RequestParam(defaultValue = "studenName") String sortBy) {
+            @RequestParam(defaultValue = "collegeName") String sortBy) {
         List<College> list = service.getAllCollegeName(pageNo, pageSize, sortBy);
         return new ResponseEntity<List<College>>(list, new HttpHeaders(), HttpStatus.OK);
     }
